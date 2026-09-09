@@ -282,3 +282,63 @@ h1, .section h2, .work-heading h2, .contact-section h2, .about-section h2 {
   .big-email { overflow-wrap: anywhere; }
   .modal { padding: 70px 10px 10px; }
 }
+
+/* Simple compact homepage intro */
+.site-header {
+  position: sticky;
+  background: #050505;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero {
+  height: clamp(300px, 42vw, 560px);
+  min-height: 0;
+  position: relative;
+  display: block;
+  background: #000;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sound-button {
+  position: absolute;
+  z-index: 3;
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid rgba(255,255,255,.65);
+  background: rgba(0,0,0,.72);
+  color: #fff;
+  padding: 10px 13px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  cursor: pointer;
+}
+
+.sound-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    height: 240px;
+    min-height: 0;
+  }
+  .hero-video {
+    object-fit: cover;
+  }
+  .sound-button {
+    right: 10px;
+    bottom: 10px;
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+}
